@@ -1,5 +1,5 @@
 Tweeter_job:
-  cron: "* * * * *"
+  cron: "1 0 * * *"
   class: "TweeterWorker"
   active_job: true
   queue: default

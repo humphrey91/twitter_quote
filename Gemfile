@@ -46,6 +46,7 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'jquery-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
+gem 'sidekiq'
 gem "sidekiq-cron", "~> 0.4.0"
 
 end

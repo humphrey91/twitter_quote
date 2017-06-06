@@ -25,5 +25,9 @@ test:
   database: twitter_quote
 
 production:
-  <<: *default
-  database: twitter_quote
+  adapter: postgresql
+  pool: 5
+  timeout: 5000
+  host: ec2-54-225-68-71.compute-1.amazonaws.com
+  username: ENV['PG_USR']
+  password: ENV['PG_PSW']

@@ -1,0 +1,5 @@
+Screenshot_job:
+  cron: "1 0 * * *"
+  class: "TweeterWorker"
+  active_job: true
+  queue: default

@@ -11,4 +11,5 @@ class TweeterWorker
       u.post_to_twitter
     end
   end
+
 end

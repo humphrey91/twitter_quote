@@ -15,3 +15,12 @@
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
+
+$(document).ready(function () {
+  $(".unsub").mouseover(function () {
+    $('.unsub').text("Unsubscribe");
+  });
+  $(".unsub").mouseout(function () {
+    $('.unsub').text("Subscribed");
+  });
+});

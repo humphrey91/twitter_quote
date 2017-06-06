@@ -47,6 +47,7 @@ gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
 gem 'redis'
 gem 'sidekiq-cron'
+
 end
 
 group :development do

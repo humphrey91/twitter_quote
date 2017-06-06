@@ -1,3 +1,6 @@
+require "net/http"
+require "uri"
+
 class User < ApplicationRecord
   def self.find_or_create_from_auth_hash(auth_hash)
     user = where(provider: auth_hash[:provider], uid: auth_hash[:uid]).first_or_create
@@ -25,7 +28,14 @@ class User < ApplicationRecord
   end
 
   def random_quote
-    return "hello"
+    RandomQuote.new.perform
   end
+
+  def unsub
+    self.subscribed = false
+    self.save
+  end
+
+
 
 end

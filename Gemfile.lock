@@ -166,6 +166,8 @@ GEM
     rb-inotify (0.9.8)
       ffi (>= 0.5.0)
     redis (3.3.3)
+    redis-namespace (1.5.3)
+      redis (~> 3.0, >= 3.0.4)
     ruby_dep (1.5.0)
     rubyzip (1.2.1)
     rufus-scheduler (3.4.2)
@@ -186,8 +188,9 @@ GEM
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
       redis (~> 3.3, >= 3.3.3)
-    sidekiq-cron (0.6.0)
-      rufus-scheduler (>= 3.3.0)
+    sidekiq-cron (0.4.5)
+      redis-namespace (>= 1.5.2)
+      rufus-scheduler (>= 2.0.24)
       sidekiq (>= 4.2.1)
     simple_oauth (0.3.1)
     spring (2.0.2)
@@ -252,10 +255,10 @@ DEPENDENCIES
   pg
   puma (~> 3.7)
   rails (~> 5.1.1)
-  redis
+  redis (~> 3.0)
   sass-rails (~> 5.0)
   selenium-webdriver
-  sidekiq-cron
+  sidekiq-cron (~> 0.4.0)
   spring
   spring-watcher-listen (~> 2.0.0)
   turbolinks (~> 5)

@@ -1,3 +1,6 @@
+require "net/http"
+require "uri"
+
 class RandomQuote
   def perform
     sleep 1

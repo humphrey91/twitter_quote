@@ -16,47 +16,46 @@
   <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
       <% if current_user %>
-      <li><%= link_to "Subscribed", unsubscribe_user_path(current_user.id), :method => :put, :class => "unsub" %></li>
+      <li><%= link_to "Subscribed", unsubscribe_user_path(current_user.id), :method => :put, :class => "unsub navbar-brand" %></li>
       <% else %>
-      <li><a href="/auth/twitter">Signup</a></li>
+      <li><a href="/auth/twitter" class="navbar-brand">Signup</a></li>
       <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-
-<div class="jumbotron">
-    <h1>Welcome!</h1>
-    <h3>Connect with Twitter to have a random quote posted daily.</h3>
-</div>
-
-
 <div class="row">
   <div class="col-sm-6">
-    <h3>All you need to do is click, "Signup".</h3>
+    <div class="intro1">
+      <h1>Welcome!</h1>
+      <h3>Connect with Twitter to have a random quote posted daily.</h3>
+    </div>
+    <div class="row">
+      <div class="col-lg-12">
+        <h3>All you need to do is click, "Signup".</h3>
+      </div>
+    </div>
   </div>
   <div class="col-sm-6">
-    <h3>Try it out now! Cancel any time you want, simply un-subscribe.</h3>
-  </div>
-</div>
-<div class="row">
-  <div class="col-lg-12 ">
-    <h3>Twitter Quotes uses Forismatic API to select random quotes for you every day!</h3>
-    <h3>Here are some example quotes...</h3>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-6">
-    <h4>The journey of a thousand miles begins with one step. -Lao Tzu</h4>
-  </div>
-  <div class="col-sm-6">
-    <h4>In separateness lies the world's great misery, in compassion lies the world's true strength. -Buddha</h4>
-  </div>
-</div>
-<div class="row">
-  <div class="col-sm-6">
-    <h4>Going back to zero can help creative juices no matter the art form you are attempting to create. -Byron Pulsifer</h4>
-  </div>
-  <div class="col-sm-6">
-    <h4>The more light you allow within you, the brighter the world you live in will be. -Shakti Gawain</h4>
+    <div class="intro2">
+      <div class="row">
+        <div class="col-lg-12 box">
+          <h3>Try it out now! Cancel any time you want, simply un-subscribe.</h3><br>
+          <h3>Twitter Quotes uses Forismatic API to select random quotes for you every day!</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 box2">
+          <h1>Here are some example quotes...</h1>
+        </div>
+        <div class="col-lg-12">
+          <ul>
+            <li>"The journey of a thousand miles begins with one step." -Lao Tzu</li></br>
+            <li>"In separateness lies the world's great misery, in compassion lies the world's true strength." -Buddha</li></br>
+            <li>"Going back to zero can help creative juices no matter the art form you are attempting to create." -Byron Pulsifer</li></br>
+            <li>"The more light you allow within you, the brighter the world you live in will be." -Shakti Gawain</li></br>
+          </ul>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

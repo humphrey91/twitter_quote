@@ -8,10 +8,12 @@
 }
 
 body{
-
+  font-family: 'proxima_nova_altbold';
   background-color: #25ABE0;
 }
-
+ .unsub {
+   margin-right: 20px;
+ }
 .p-pic {
   display: inline;
   margin: 0 5px;
@@ -29,13 +31,14 @@ body{
 .intro1 {
   width: 100%;
   margin-top: 70px;
-  padding-top: 10px;
+  padding-top: 20px;
   padding-bottom: 20px;
   height: 800px;
   background-image: url('twitter-mobile-n4.jpg');
   background-repeat: no-repeat;
   background-position: 10% 70%;
   background-size: 60%;
+  color: rgb(20, 23, 26);
 }
 
 .intro2 {
@@ -49,9 +52,13 @@ body{
   }
   .box {
     height: 200px;
+    color: #e6ffff;
   }
   .box2 {
-    margin-top: 40px;
+    margin-top: 150px;
     margin-bottom: 20px;
+  }
+  li {
+    color: #e6ffff;
   }
 }

@@ -1,3 +1,5 @@
+require 'json'
+
 class RandomQuote
 
   def initialize
@@ -6,8 +8,12 @@ class RandomQuote
 
   def perform
     response = Net::HTTP.get_response(@uri)
-    sleep 1
-    formatted = JSON.parse(response.body)
+    sleep 5
+    begin
+      formatted = JSON.parse(response.body)
+    rescue JSON::ParseError => e
+      RandomQuote.new.perform
+    end
     author = "anonymous"
     author = formatted["quoteAuthor"] unless formatted["quoteAuthor"].blank?
     quote = formatted["quoteText"]+ "-" + author

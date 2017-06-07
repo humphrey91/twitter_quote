@@ -1,15 +1,18 @@
-require "net/http"
-require "uri"
-
 class RandomQuote
+
+  def initialize
+    @uri = URI.parse("https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en")
+  end
+
   def perform
+    response = Net::HTTP.get_response(@uri)
     sleep 1
-    uri = URI.parse("https://api.forismatic.com/api/1.0/?method=getQuote&format=json&lang=en")
-    response = Net::HTTP.get_response(uri)
-    formated = JSON.parse(response.body)
-    quote = formated["quoteText"]+" -"+formated["quoteAuthor"]
+    formatted = JSON.parse(response.body)
+    author = "anonymous"
+    author = formatted["quoteAuthor"] unless formatted["quoteAuthor"].blank?
+    quote = formatted["quoteText"]+ "-" + author
     if quote.length > 140
-      RandomQuote.new
+      RandomQuote.new.perform
     else
       return quote
     end

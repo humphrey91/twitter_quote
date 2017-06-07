@@ -43,13 +43,14 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'sidekiq'
 gem 'sidekiq-cron', '~> 0.4.0'
 gem 'figaro'
+gem 'rails_12factor', group: :production
 group :development, :test do
 # Call 'byebug' anywhere in the code to stop execution and get a debugger console
 gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
 # Adds support for Capybara system testing and selenium driver
 gem 'capybara', '~> 2.13'
 gem 'selenium-webdriver'
-gem 'rails_12factor', group: :production
+
 
 end
 

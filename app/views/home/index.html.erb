@@ -18,13 +18,13 @@
       <% if current_user %>
       <li><%= link_to "Subscribed", unsubscribe_user_path(current_user.id), :method => :put, :class => "unsub navbar-brand" %></li>
       <% else %>
-      <li><a href="/auth/twitter" class="navbar-brand">Signup</a></li>
+      <li><a href="/auth/twitter" class="navbar-brand unsub">Signup</a></li>
       <% end %>
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
 <div class="row">
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <div class="intro1">
       <h1>Welcome!</h1>
       <h3>Connect with Twitter to have a random quote posted daily.</h3>
@@ -35,7 +35,7 @@
       </div>
     </div>
   </div>
-  <div class="col-sm-6">
+  <div class="col-md-6">
     <div class="intro2">
       <div class="row">
         <div class="col-lg-12 box">

@@ -18,9 +18,19 @@
 
 $(document).ready(function () {
   $(".unsub").mouseover(function () {
-    $('.unsub').text("Unsubscribe");
+    var element = document.getElementById('user').value
+    if (element !== "") {
+      $('.unsub').text("Unsubscribe");
+    } else {
+      $('.unsub').text("Sign-Up");
+    }
   });
   $(".unsub").mouseout(function () {
-    $('.unsub').text("Subscribed");
+    var element = document.getElementById('user').value
+    if (element !== "") {
+      $('.unsub').text("Subscribed");
+    } else {
+      $('.unsub').text("Sign-Up");
+    }
   });
 });

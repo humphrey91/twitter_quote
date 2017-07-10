@@ -18,9 +18,10 @@
       <% if current_user %>
       <li><%= link_to "Subscribed", unsubscribe_user_path(current_user.id), :method => :put, :class => "unsub navbar-brand" %></li>
       <% else %>
-      <li><a href="/auth/twitter" class="navbar-brand unsub">Signup</a></li>
+      <li><a href="/auth/twitter" class="navbar-brand unsub">Sign-Up</a></li>
       <% end %>
     </ul>
+    <input id="user" type="hidden" name="" value="<%= current_user %>">
   </div><!-- /.navbar-collapse -->
 </nav>
 <div class="row">

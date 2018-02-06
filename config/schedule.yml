@@ -3,9 +3,3 @@ Tweeter_job:
   class: "TweeterWorker"
   active_job: true
   queue: default
-
-Wakeup_job:
-  cron: "*/20 * * * *"
-  class: "WakeupWorker"
-  active_job: true
-  queue: default

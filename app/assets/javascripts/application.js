@@ -12,25 +12,9 @@
 //
 //= require rails-ujs
 //= require turbolinks
+//= require jquery.min
+//= require jquery.scrolly.min
+//= require skel.min
+//= require util
+//= require main
 //= require_tree .
-//= require jquery
-//= require bootstrap-sprockets
-
-$(document).ready(function () {
-  $(".unsub").mouseover(function () {
-    var element = document.getElementById('user').value
-    if (element !== "") {
-      $('.unsub').text("Unsubscribe");
-    } else {
-      $('.unsub').text("Sign-Up");
-    }
-  });
-  $(".unsub").mouseout(function () {
-    var element = document.getElementById('user').value
-    if (element !== "") {
-      $('.unsub').text("Subscribed");
-    } else {
-      $('.unsub').text("Sign-Up");
-    }
-  });
-});

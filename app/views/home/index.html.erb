@@ -1,62 +1,89 @@
+		<!-- Header -->
+			<header id="header">
+				<div class="content">
+					<h1><a href="#">Twitter Quotes</a></h1>
+					<p style="text-align:center;">Connect with Twitter to have </br> a random quote posted daily.</p>
+					<ul class="actions">
+            <% if current_user %>
+              <li><%= link_to "Un-Subscribe", unsubscribe_user_path(current_user.id), :method => :put, :class => "button special icon fa-ban" %></li>
+            <% else %>
+              <li><a href="/auth/twitter" class="button special icon fa-user-plus">Subscribe</a></li>
+            <% end %>
+						<li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
+					</ul>
+				</div>
 
-<nav class="navbar navbar-default navbar-fixed-top">
-  <div class="navbar-header">
-    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-      <span class="sr-only">Toggle navigation</span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-      <span class="icon-bar"></span>
-    </button>
-    <a class="navbar-brand" href="<% root_path %>">Twitter Quotes</a>
-    <% if current_user %>
-    <img src="<%= current_user.profile_image%>" class="profile-image img-circle">
-    <p class="navbar-text">The Current User is: <%= current_user.name %> </p>
-    <% end %>
-  </div>
-  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-    <ul class="nav navbar-nav navbar-right">
-      <% if current_user %>
-      <li><%= link_to "Subscribed", unsubscribe_user_path(current_user.id), :method => :put, :class => "unsub navbar-brand" %></li>
-      <% else %>
-      <li><a href="/auth/twitter" class="navbar-brand unsub">Sign-Up</a></li>
-      <% end %>
-    </ul>
-    <input id="user" type="hidden" name="" value="<%= current_user %>">
-  </div><!-- /.navbar-collapse -->
-</nav>
-<div class="row">
-  <div class="col-md-6">
-    <div class="intro1">
-      <h1>Welcome!</h1>
-      <h3>Connect with Twitter to have a random quote posted daily.</h3>
-    </div>
-    <div class="row">
-      <div class="col-lg-12">
-        <h3>All you need to do is click, "Signup".</h3>
-      </div>
-    </div>
-  </div>
-  <div class="col-md-6">
-    <div class="intro2">
-      <div class="row">
-        <div class="col-lg-12 box">
-          <h1>Try it out now! Cancel any time you want, simply un-subscribe.</h1><br>
-          <h1>Twitter Quotes uses Forismatic API to select random quotes for you every day!</h1>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-lg-12 box2">
-          <h1>Here are some example quotes...</h1>
-        </div>
-        <div class="col-lg-12">
-          <ul>
-            <li>"The journey of a thousand miles begins with one step." -Lao Tzu</li></br>
-            <li>"In separateness lies the world's great misery, in compassion lies the world's true strength." -Buddha</li></br>
-            <li>"Going back to zero can help creative juices no matter the art form you are attempting to create." -Byron Pulsifer</li></br>
-            <li>"The more light you allow within you, the brighter the world you live in will be." -Shakti Gawain</li></br>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
+
+
+			</header>
+
+		<!-- One -->
+			<section id="one" class="wrapper style2 special">
+				<header class="major">
+					<h2>Twitter Quotes uses <a href="https://forismatic.com/en/" style="font-style:italic;">forismatic</a> to </br> post to your Twitter feed once per day.</h2>
+				</header>
+				<ul class="icons major">
+					<li><span class="icon fa-quote-left"><span class="label">Shoot</span></span></li>
+					<li><span class="icon fa-refresh"><span class="label">Process</span></span></li>
+					<li><span class="icon fa-quote-right"><span class="label">Upload</span></span></li>
+				</ul>
+			</section>
+
+		<!-- Two -->
+			<section id="two" class="wrapper">
+				<div class="inner alt">
+					<section class="spotlight">
+						<div class="image"><img src="Ajahn-Chah.jpeg" alt="" /></div>
+						<div class="content">
+							<h3>Ajahn Chah</h3>
+							<p>If you let go a little, you will have a little peace. If you let go a lot, you will have a lot of peace.</p>
+						</div>
+					</section>
+					<section class="spotlight">
+						<div class="image"><img src="Walt_Disney_1946.JPG" alt="" /></div>
+						<div class="content">
+							<h3>Walt Disney</h3>
+							<p>We've got to have a dream if we are going to make a dream come true.</p>
+						</div>
+					</section>
+					<section class="spotlight">
+						<div class="image"><img src="mlk.jpg" alt="" /></div>
+						<div class="content">
+							<h3>Martin Luther King</h3>
+							<p>Our lives begin to end the day we become silent about things that matter.</p>
+						</div>
+					</section>
+					<section class="special">
+						<ul class="icons labeled">
+							<li><span class="icon fa-quote-left"><span class="icon fa-quote-right"><span class="label">Famous Quotes</span></span></span></li>
+							<li><span class="icon fa-refresh"><span class="label">Automatic</span></span></li>
+							<li><span class="icon fa-calendar-check-o"><span class="label">Daily</span></span></li>
+						</ul>
+					</section>
+				</div>
+			</section>
+
+		<!-- Three -->
+			<section id="three" class="wrapper style2 special">
+				<header class="major">
+					<h2>Give Twitter Quotes a try!</h2>
+					<p>Twitter Quotes is a great way to learn from important figures throughout time. </br>It's also a great way to share!</p>
+				</header>
+        <ul class="actions">
+          <% if current_user %>
+            <li><%= link_to "Un-Subscribe", unsubscribe_user_path(current_user.id), :method => :put, :class => "button special icon fa-ban" %></li>
+          <% else %>
+            <li><a href="/auth/twitter" class="button special icon fa-user-plus">Subscribe</a></li>
+          <% end %>
+          <li><a href="#one" class="button icon fa-chevron-down scrolly">Learn More</a></li>
+        </ul>
+			</section>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+
+					<li><a href="https://twitter.com/humphreyjs" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="https://github.com/humphrey91" class="icon fa-github"><span class="label">Github</span></a></li>
+				</ul>
+			</footer>

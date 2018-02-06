@@ -13,11 +13,3 @@ class TweeterWorker
   end
 
 end
-
-class WakeupWorker
-
-  include Sidekiq::Worker
-  def perform
-    Wakeup.new.perform
-  end
-end

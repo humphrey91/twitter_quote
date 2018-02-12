@@ -1,0 +1,15 @@
+<!-- Header -->
+  <header id="header">
+    <div class="content">
+      <h1><%= link_to "Twitter Quotes", root_path %></h1>
+      <p style="text-align:center;">Connect with Twitter to have </br> a random quote posted daily.</p>
+      <ul class="actions">
+        <% if current_user %>
+          <li><%= link_to "Un-Subscribe", unsubscribe_user_path(current_user.id), :method => :put, :class => "button special icon fa-ban" %></li>
+        <% else %>
+          <li><%= link_to "Subscribe", "/auth/twitter", class: "button special icon fa-user-plus" %></li>
+        <% end %>
+        <li><%= link_to "Learn More", "#one", class: "button icon fa-chevron-down scrolly" %></li>
+      </ul>
+    </div>
+  </header>
